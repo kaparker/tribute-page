@@ -18,18 +18,18 @@ img {
     font-size: 16px;
     padding: 20px;
     grid-area: footer;
-    background: #FFFFFF;
+    background: white;
 }
 
 .footer a {
-    color: #000000;
+    color: black;
 
 }
 
 .thin-grey-border {
-border-color: #6B696A;
-border-width: 5px;
-border-style: solid;
+    border-color: #6B696A;
+    border-width: 5px;
+    border-style: solid;
 }
 
 figcaption {
@@ -53,14 +53,14 @@ figcaption {
 #d1{
     padding: 10px;
     grid-area: d1;
-        background:#E2DADB;
+    background:#E2DADB;
 
 }
 
 #d2{
     padding: 10px;
     grid-area: d2;
-        background:#E2DADB;
+    background:#E2DADB;
 
 }
 
@@ -75,7 +75,7 @@ figcaption {
     width: 100%;
     display: grid;
     min-height: 100px;
-    background:#FFFFFF;
+    background: white;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto 5fr;
     grid-template-areas:
@@ -84,40 +84,33 @@ figcaption {
             "d2"
             "d3"
             "footer";
-
 }
 
 
 
 @media (min-width: 700px){
-
     #main{
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
-        "header header header header"
-        "d1 d1 d2 d2"
-        ". d3 d3 ."
-        "footer footer footer footer";
-
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+                "header header header header"
+                "d1 d1 d2 d2"
+                ". d3 d3 ."
+                "footer footer footer footer";
     }
-
-  }
+}
 
 @media (min-width: 1050px){
-        #d4 {
-        display: none;
-    }
     #main{
-    grid-template-columns: repeat(3, minmax(50px, 1fr));
-    grid-template-rows: auto auto auto;
-      grid-template-areas:
-        "header header header"
-        "d1 d2 d3"
-        "footer footer footer";
+        grid-template-columns: repeat(3, minmax(50px, 1fr));
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+                "header header header"
+                "d1 d2 d3"
+                "footer footer footer";
     }
 
-  }
+}
 
 
 
