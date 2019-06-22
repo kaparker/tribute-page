@@ -1,25 +1,123 @@
-body {
 
+body {
+    font-family: Open Sans;
+    text-align: center;
 }
 
 img {
-  max-width: 100%;
-  display: block;
-  height: auto;
-  margin: 0 auto;
+    max-width: 100%;
+    display: block;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 50%;
+    min-width: 120px;
 }
-  #header{background:LightPink;
-    grid-column: 1 / 4;
+
+.footer{
+    font-family: Rock Salt;
+    font-size: 16px;
+    padding: 20px;
+    grid-area: footer;
+    background: #FFFFFF;
 }
-  #d1{background:LightSkyBlue;}
-  #d2{background:LightSalmon;}
-  #d3{background:PaleTurquoise;}
+
+.footer a {
+    color: #000000;
+
+}
+
+.thin-grey-border {
+border-color: #6B696A;
+border-width: 5px;
+border-style: solid;
+}
+
+figcaption {
+    font-size: 10px;
+}
+
+.title {
+    font-family: Rock Salt;
+}
+
+.header{
+    background:#FFFFFF;
+    grid-area: header;
+}
+
+.names {
+    padding: 10px;
+    grid-area: names;
+}
+
+#d1{
+    padding: 10px;
+    grid-area: d1;
+        background:#E2DADB;
+
+}
+
+#d2{
+    padding: 10px;
+    grid-area: d2;
+        background:#E2DADB;
+
+}
+
+#d3{
+    padding:10px;
+    grid-area: d3;
+    background:#E2DADB;
+
+}
 
 #main {
-  width: 100%;
-  background: LightGray;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 5fr;
-  grid-gap: 0px 10px;
+    width: 100%;
+    display: grid;
+    min-height: 100px;
+    background:#FFFFFF;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 5fr;
+    grid-template-areas:
+            "header"
+            "d1"
+            "d2"
+            "d3"
+            "footer";
+
 }
+
+
+
+@media (min-width: 700px){
+
+    #main{
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+        "header header header header"
+        "d1 d1 d2 d2"
+        ". d3 d3 ."
+        "footer footer footer footer";
+
+    }
+
+  }
+
+@media (min-width: 1050px){
+        #d4 {
+        display: none;
+    }
+    #main{
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    grid-template-rows: auto auto auto;
+      grid-template-areas:
+        "header header header"
+        "d1 d2 d3"
+        "footer footer footer";
+    }
+
+  }
+
+
+
