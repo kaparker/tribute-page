@@ -4,6 +4,10 @@ body {
     text-align: center;
 }
 
+.details {
+    text-align: left;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -11,6 +15,7 @@ img {
     margin: 0 auto;
     border-radius: 50%;
     min-width: 120px;
+    padding: 10px;
 }
 
 .footer{
@@ -36,7 +41,7 @@ figcaption {
     font-size: 10px;
 }
 
-.title {
+.title{
     font-family: Rock Salt;
 }
 
@@ -45,9 +50,8 @@ figcaption {
     grid-area: header;
 }
 
-.names {
-    padding: 10px;
-    grid-area: names;
+p {
+    font-family: "Open Sans";
 }
 
 #d1{
